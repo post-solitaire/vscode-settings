@@ -1,0 +1,51 @@
+{
+    // Disable all AI.
+    "chat.disableAIFeatures": true,
+
+
+
+    // Rulers at 80 and 120 columns, no wrap.
+    "editor.rulers": [
+        80,
+        120
+    ],
+
+    // But wrap lines in Markdown and Jinja2 template files.
+    "[markdown][jinja]": {
+        "editor.wordWrap": "on",
+    },
+
+
+
+    // Render all whitespace characters.
+    "editor.renderWhitespace": "all",
+
+    // Remove trailing whitespace chatacters and empty lines, but leave final newline.
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+
+
+    // Disable sticky scroll in the terminal.
+    "terminal.integrated.stickyScroll.enabled": false,
+
+    // Fix terminal cutting off underscores.
+    "terminal.integrated.lineHeight": 1,
+
+
+
+    // [Exclude Git Ignore](https://marketplace.visualstudio.com/items?itemName=Tuomar2.hide-gitignored-files) flip flop.
+    "explorer.excludeGitIgnore": false,
+
+    // Set CMake build directory as ".build".
+    "cmake.buildDirectory": "${workspaceFolder}/.build",
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/.build"
+    ],
+
+
+
+    // Disable inlay hints.
+    "editor.inlayHints.enabled": "off",
+}
