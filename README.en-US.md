@@ -8,11 +8,11 @@ This is a utility repo mostly for myself, not really a public-facing project. Bu
 
 # External file as `settings.json`
 
-`settings.json` can be a symlink, [apparently](https://github.com/microsoft/vscode/issues/194856), and VS Code will follow it transparently. Just copy the settings file to a separate location (for example in your projects folder) while VS Code is closed and create a symlink back to it:
+`settings.json` can be a symlink, [apparently](https://github.com/microsoft/vscode/issues/194856), and VS Code will follow it transparently. Just move the settings file to a separate location (for example in your projects folder) while VS Code is closed and create a symlink back to it:
 ```bash
 cd ~/.config/Code/User
 mv settings.json ~/projects/vscode-settings/
-ln -s $HOME/projects/vscode-settings settings.json
+ln -s $HOME/projects/vscode-settings/settings.json settings.json
 ```
 Now any settings you change via UI or in the settings file, will be reflected in the new "external" file. You can also change them in the "external" file and VS Code will follow. And since the file is now outside of the VS Code's own config folder, you can add it to a git repo (like I did here), or whatever you want to do with it.
 
